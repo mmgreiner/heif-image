@@ -4,13 +4,13 @@ This all started out by trying to rapidly browse on a Mac the image files in the
 
 ## Accessing the picture files
 
-The image files are stored in various subdirectories of `"~/Pictures/Photos Library.photoslibrary/originals"`. It contains subdirectories named `1`, `2`, ... which contain `jpeg`` and `heic` files. According to [MacWorld: What is HEIC?](https://www.macworld.com/article/672609/what-is-heic.html)
+The image files are stored in various subdirectories of `"~/Pictures/Photos Library.photoslibrary/originals"`. It contains subdirectories named `1`, `2`, ... which contain `jpeg` and `heic` files. According to [MacWorld: What is HEIC?](https://www.macworld.com/article/672609/what-is-heic.html)
 
 > Apple has replaced the JPEG image format with the new HEIC alternative in iOS.
 > ...
 > HEIC is the file format name Apple has chosen for the new HEIF standard. HEIF stands for High Efficiency Image Format, and, as the name suggests, is a more streamlined way of storing image files.
 
-Unfortunately, the standard [image](https://pkg.go.dev/image) libraries of Go cannot handle this format.
+Unfortunately, the standard Go [image](https://pkg.go.dev/image) libraries cannot handle this format.
 
 
 ## Installation
@@ -86,7 +86,7 @@ outf.Close()
 
 ## Exif
 
-Another question is to get as much information about the image as possible. This information is stored in the image file in the **Exchangeable image file format** Exif. According to [wikipedia][exif], 
+Another question is to get as much information about the image as possible. This information is stored in the image file in the Exchangeable image file format Exif. According to [Wikipedia Exif][exif]: 
 
 > **Exchangeable image file format** (officially **Exif**, according to JEIDA/JEITA/CIPA specifications)[5] is a standard that specifies formats for images, sound, and ancillary tags used by digital cameras (including smartphones), scanners and other systems handling image and sound files recorded by digital cameras. 
 
@@ -137,7 +137,7 @@ GPS Longitude: 	-87.656342
 
 - **libheif**: C library with Go API for heif images [libheif]
 - **go-libheif**: Go Wrapper for [libheif] at [go-libheif](https://github.com/MaestroError/go-libheif/tree/maestro)
-- **imagemetag**: Go package to handle image EXIF metadata at [imagemeta]
+- **imagemeta**: Go package to handle image EXIF metadata at [imagemeta]
 
 [libheif]: https://github.com/strukturag/libheif
 [imagemeta]: https://github.com/evanoberholster/imagemeta
